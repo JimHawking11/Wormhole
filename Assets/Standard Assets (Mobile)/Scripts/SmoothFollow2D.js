@@ -13,8 +13,8 @@ function Start()
 
 function Update() 
 {
-	thisTransform.position.x = Mathf.SmoothDamp( thisTransform.position.x, 
-		target.position.x, velocity.x, smoothTime);
-	thisTransform.position.z = Mathf.SmoothDamp( thisTransform.position.z, 
-		target.position.z, velocity.z, smoothTime);
+	if(target){
+		thisTransform.position.x = Mathf.SmoothDamp( thisTransform.position.x, target.position.x, velocity.x, smoothTime);
+		thisTransform.position.z = Mathf.SmoothDamp( thisTransform.position.z, target.position.z, velocity.z, smoothTime);
+	}
 }
